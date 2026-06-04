@@ -6,3 +6,17 @@
 
 
 ## {9,4,9,1,3,2} -> B:4 S:9 P:5
+
+arr = [9,4,9,1,3,2]
+arrlen = len(arr)
+
+maxProfit = 0
+minValue = arr[0]
+for i in range(arrlen):
+    if arr[i] < minValue:
+        minValue = arr[i]
+    profit = arr[i] - minValue
+    if profit > maxProfit:
+        maxProfit = profit
+
+print(f" Max Profit : {maxProfit}" )
